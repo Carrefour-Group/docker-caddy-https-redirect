@@ -1,0 +1,14 @@
+:80 {
+	redir https://{host}{uri}
+	log {
+		output stdout
+		format json
+	}
+}
+
+:8181 {
+	metrics
+	log {
+		output discard
+	}
+}
